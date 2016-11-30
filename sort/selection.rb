@@ -14,7 +14,7 @@ class SelectionSort
 
     0.upto(len) do |i|
       min = i
-      (i+1).upto(len) { |j| min = j if arr[min] > arr[j] }
+      (i + 1).upto(len) { |j| min = j if arr[min] > arr[j] }
       swap(i, min)
     end
     arr

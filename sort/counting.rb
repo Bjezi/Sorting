@@ -13,6 +13,6 @@ class CountingSort
     index = Array.new(arr.size, 0)
 
     arr.each { |x| index[x] += 1 }
-    (0...index.size).map { |i| [i] * index[i] }.flatten
+    (0...index.size).flat_map { |i| [i] * index[i] }
   end
 end

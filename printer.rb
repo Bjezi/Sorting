@@ -5,10 +5,10 @@ class Printer
   class << self
 
     def greeting
-      puts "Hello user, make your choice!"
-      puts "~\'bubble\' - for bubble sort\n~\'merge\' - for merge sort"
-      puts "~\'selection\' - for selection sort\n~\'counting\' - for counting sort"
-      puts "~\'quick\' - for quicksort\n~\'shell\' - for shell sort "
+      puts 'Input method what you need'
+      %w(bubble merge selection counting quick shell ).each do |sort_method|
+        puts "~ \'#{sort_method}\' for #{sort_method} sort"
+      end
       choice
     end
 
@@ -20,11 +20,7 @@ class Printer
     def getlen(ch)
       puts 'Enter size of array: '
       len = gets.strip.to_i
-      storage_data(ch, len)
-    end
-
-    def storage_data(ch, len)
-      options = { choice: ch, dimension: len }
+      options = {choice: ch, dimension: len}
       output(options)
     end
 
